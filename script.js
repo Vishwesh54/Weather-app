@@ -1,18 +1,6 @@
 function showTime(date) {
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    let months = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-    ];
+    let months = [ "January", "February", "March", "April", "May", "July", "August", "September", "October", "November", "December"];
     let timeMonth = months[date.getMonth()];
     let timeDate = date.getDate();
     let timeDay = days[date.getDay()];
@@ -206,32 +194,6 @@ function showPosition(position) {
         .get(`${apiUrl}lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`)
         .then(getWeather);
 }
-// function showFahrenheitTemp(event) {
-//   event.preventDefault();
-//   let temperature = document.querySelector("#temperatureValue");
-//   celsiusLink.classList.remove("active");
-//   fahrenheitLink.classList.add("active");
-//   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
-//   temperature.innerHTML = Math.round(fahrenheitTemp);
-// }
-
-// function showCelsiusTemp(event) {
-//   event.preventDefault();
-//   celsiusLink.classList.add("active");
-//   fahrenheitLink.classList.remove("active");
-//   let temperature = document.querySelector("#temperatureValue");
-//   temperature.innerHTML = Math.round(celsiusTemp);
-// }
-// let celsiusTemp = null;
 
 let button = document.querySelector(".homeButton");
 button.addEventListener("click", userLocation);
-
-// let forecastF = document.querySelector("#forecast-fahrenheit");
-// forecastF.classList.add("invisible");
-
-// let fahrenheitLink = document.querySelector("#fahrenheit-link");
-// fahrenheitLink.addEventListener("click", showFahrenheitTemp);
-
-// let celsiusLink = document.querySelector("#celsius-link");
-// celsiusLink.addEventListener("click", showCelsiusTemp);
